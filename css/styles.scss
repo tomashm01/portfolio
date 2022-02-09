@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+// Variables
+$blue: #313cd1;
+$grey: #b4b0b0;
+$small: 650px;
+
+body{
+    font-family: 'Rowdies', cursive;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.active{
+    color:white;
+}
+
+.oculto{
+    display:none;
+}
+
+nav{
+    background-color:black;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        li{
+            padding: 10px;
+            a{
+                text-decoration: none;
+                color:white;
+                &:hover{
+                    color:$blue;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:$small){
+        
+    }
+}
+
