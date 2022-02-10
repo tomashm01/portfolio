@@ -22,6 +22,27 @@ html {
     display:none;
 }
 
+@keyframes opacidad{
+    0%{
+        opacity:0;
+    }
+    20%{
+        opacity:0.2;
+    }
+    40%{
+        opacity:0.4;
+    }
+    60%{
+        opacity:0.6;
+    }
+    80%{
+        opacity:0.8;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
 nav{
     background-color:black;
     color:white;
@@ -31,6 +52,7 @@ nav{
     position:fixed;
     width:100%;
     justify-content: space-evenly;
+    animation: opacidad 0.5s;
     ul{
         display: flex;
         flex-direction: row;
@@ -46,16 +68,14 @@ nav{
             }
         }
     }
-    @media screen and (max-width:$small){
-        
-    }
 }
+
 
 .bgProgramacion{
     width:100%;
     height:100vh;
     background-image: url("../img/bg.jpg");
-    background-size: cover;
+    background-size: auto;
     background-attachment: fixed;
     display:flex;
     flex-direction:row;
@@ -65,6 +85,7 @@ nav{
         width:250px;
         height:250px;
         margin-right: 1%;
+        animation: opacidad 0.5s;
     }
     .presentacion{
         color:white;
@@ -72,6 +93,7 @@ nav{
         align-items:center;
         justify-content:center;
         display:flex;
+        animation: opacidad 0.5s;
         h1{
             color: $blue;
             font-size: 3rem;
@@ -129,7 +151,6 @@ nav{
         flex-direction: column;
         align-items:center;
         justify-content:center;
-        flex-wrap:wrap;
 
         h2{
             text-align: center;
@@ -143,6 +164,7 @@ nav{
             align-items:center;
             justify-content:center;
             width:100%;
+            margin-bottom: 1%;
             .skill{
                 width:30%;
                 display:flex;
@@ -156,6 +178,21 @@ nav{
                 span{
                     font-size:1.1rem;
                     color:$grey-black;
+                }
+            }
+            .barraSkill{
+                width:100%;
+                background-color:red;
+                border-radius:10px;
+                display:flex;
+                margin:0;
+                .otraSkill{
+                    width:100%;
+                    border-radius:10px;
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    align-items:center;
                 }
             }
         }
