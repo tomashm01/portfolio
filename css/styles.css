@@ -283,6 +283,9 @@ nav ul li a:hover {
   #sobreMi h2 {
     font-size: 1.2rem;
   }
+  #sobreMi .curriculum span {
+    width: 80%;
+  }
 }
 
 #proyectos {
@@ -299,6 +302,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 }
 
 #proyectos div h2 {
@@ -319,9 +323,10 @@ nav ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   flex-wrap: wrap;
   gap: 2%;
+  min-width: 420px;
 }
 
 #proyectos div .proyects .proyecto {
@@ -329,6 +334,7 @@ nav ul li a:hover {
   border-radius: 10px;
   object-fit: cover;
   overflow: hidden;
+  min-width: 420px;
 }
 
 #proyectos div .proyects .proyecto:hover {
@@ -352,7 +358,7 @@ nav ul li a:hover {
   display: block;
   transition: all 1s;
   border-radius: 10px;
-  max-height: 190px;
+  max-height: 290px;
 }
 
 #proyectos div .proyects .proyecto .descripcion {
