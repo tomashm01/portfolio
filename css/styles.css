@@ -139,6 +139,10 @@ nav ul li a:hover {
   .bgProgramacion .presentacion {
     margin-top: 10%;
   }
+  .bgProgramacion h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -148,6 +152,7 @@ nav ul li a:hover {
   }
   .bgProgramacion .presentacion h1 {
     font-size: 2rem;
+    text-align: center;
   }
 }
 

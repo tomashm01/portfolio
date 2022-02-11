@@ -130,6 +130,10 @@ nav{
         .presentacion{
             margin-top:10%;
         }
+        h1{
+            font-size: 2.5rem;
+            text-align: center;
+        }
     }
     @media screen and (max-width: $small) {
         display:flex;
@@ -137,6 +141,7 @@ nav{
         .presentacion{
             h1{
                 font-size: 2rem;
+                text-align: center;
             }
 
         }
