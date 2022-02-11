@@ -292,7 +292,7 @@ nav ul li a:hover {
 #proyectos {
   width: 100%;
   height: 100vh;
-  min-height: 800px;
+  min-height: 950px;
   display: flex;
   flex-direction: column;
   align-items: center;
