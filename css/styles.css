@@ -386,3 +386,108 @@ nav ul li a:hover {
 #proyectos div .proyects .proyecto .descripcion a:hover {
   color: #b4b0b0;
 }
+
+#contacto {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contacto div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contacto div .contactos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#contacto div .contactos a {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+#contacto div .contactos a div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contacto div .contactos a div p {
+  text-align: center;
+  color: #b4b0b0;
+}
+
+#contacto div .contactos a div p:hover {
+  color: #313cd1;
+}
+
+#contacto div .contactos a div i {
+  font-size: 2.5rem;
+  color: #4d4d4d;
+}
+
+#contacto div .contactos a div i:hover {
+  color: #313cd1;
+}
+
+#contacto h2 {
+  text-align: center;
+  width: 100%;
+}
+
+#contacto h3 {
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  font-family: "Roboto", sans-serif;
+  height: 100px;
+  color: #4d4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 104, 104, 0.05);
+}
+
+footer div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div div {
+  display: flex;
+  flex-direction: row;
+}
+
+footer div div p {
+  margin: 0;
+}
+
+footer div div a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+footer div div a:hover {
+  color: #313cd1;
+}
+
+footer div p {
+  margin-bottom: 0;
+}
