@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap");
 body {
   font-family: 'Rowdies', cursive;
-  min-width: 450px;
+  min-width: 420px;
 }
 
 html {
@@ -35,6 +35,14 @@ html {
   100% {
     opacity: 1;
   }
+}
+
+section {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
 }
 
 nav {
@@ -147,7 +155,7 @@ nav ul li a:hover {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   min-height: 850px;
 }
@@ -258,10 +266,22 @@ nav ul li a:hover {
     align-items: center;
   }
   #sobreMi .curriculum {
-    width: 80%;
+    width: 95%;
   }
   #sobreMi .skills {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #sobreMi h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -299,7 +319,7 @@ nav ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
   gap: 2%;
 }
