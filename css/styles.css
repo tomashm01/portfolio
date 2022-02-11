@@ -43,6 +43,10 @@ section {
 
 .container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav {
@@ -279,7 +283,7 @@ nav ul li a:hover {
 }
 
 #proyectos {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   min-height: 950px;
   display: flex;
@@ -292,6 +296,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #proyectos div h2 {

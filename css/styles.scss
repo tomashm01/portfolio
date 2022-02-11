@@ -5,6 +5,7 @@ $blue: #313cd1;
 $grey: #b4b0b0;
 $grey-black: #4d4d4d;
 $small: 350px;
+$small-medium: 500px;
 $medium: 750px;
 
 body{
@@ -50,6 +51,10 @@ section{
 }
 .container{
     width: 100%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
 }
 nav{
     background-color:black;
@@ -261,7 +266,7 @@ nav{
 }
 
 #proyectos{
-    width:100%;
+    width:90%;
     height:100vh;
     min-height: 950px;
     display: flex;
@@ -272,6 +277,7 @@ nav{
         display:flex;
         flex-direction:column;
         align-items:center;
+        justify-content:center;
         h2{
             text-align:center;
             width: 100%;
@@ -342,7 +348,11 @@ nav{
                     }
                 }
             }
-            
+        }
+        @media screen and (max-width: $small-medium){
+            .proyecto{
+
+            }    
         }
     }
 }
