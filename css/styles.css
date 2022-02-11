@@ -68,6 +68,18 @@ nav ul li a:hover {
   color: #313cd1;
 }
 
+@media screen and (max-width: 750px) {
+  nav {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  nav {
+    visibility: hidden;
+  }
+}
+
 .bgProgramacion {
   width: 100%;
   height: 100vh;
@@ -104,6 +116,30 @@ nav ul li a:hover {
 
 .bgProgramacion .presentacion span {
   font-size: 1.5rem;
+  min-height: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .bgProgramacion {
+    display: flex;
+    flex-direction: column;
+  }
+  .bgProgramacion img {
+    margin: 0;
+  }
+  .bgProgramacion .presentacion {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bgProgramacion {
+    display: flex;
+    flex-direction: column;
+  }
+  .bgProgramacion .presentacion h1 {
+    font-size: 2rem;
+  }
 }
 
 #sobreMi {

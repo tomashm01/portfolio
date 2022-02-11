@@ -4,7 +4,8 @@
 $blue: #313cd1;
 $grey: #b4b0b0;
 $grey-black: #4d4d4d;
-$small: 650px;
+$small: 500px;
+$medium: 750px;
 
 body{
     font-family: 'Rowdies', cursive;    
@@ -69,6 +70,14 @@ nav{
             }
         }
     }
+    @media screen and (max-width: $medium) {
+        visibility: hidden;
+        
+    }
+
+    @media screen and (min-width: $small) {
+        visibility: hidden;
+    }
 }
 
 .bgProgramacion{
@@ -101,6 +110,26 @@ nav{
         }
         span{
             font-size: 1.5rem;
+            min-height: 30px;
+        }
+    }
+    @media screen and (max-width: $medium) {
+        display:flex;
+        flex-direction:column;
+        img{
+            margin:0;
+        }
+        .presentacion{
+            margin-top:10%;
+        }
+    }
+    @media screen and (max-width: $small) {
+        display:flex;
+        flex-direction:column;
+        .presentacion{
+            h1{
+                font-size: 2rem;
+            }
         }
     }
 }
