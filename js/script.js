@@ -12,9 +12,11 @@
     document.addEventListener('DOMContentLoaded',function(e){
         
         const lista=document.querySelectorAll('li');
+        
 
         animarPalabra();
         animarSkill();
+        
         lista.forEach(function(el){
             
         });
