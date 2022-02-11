@@ -134,6 +134,7 @@ nav{
     @media screen and (max-width: $small) {
         display:flex;
         flex-direction:column;
+        min-height:900px;
         .presentacion{
             h1{
                 font-size: 2rem;
