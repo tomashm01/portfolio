@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap");
 body {
   font-family: 'Rowdies', cursive;
-  min-width: 420px;
+  *min-width: 420px;
 }
 
 html {
@@ -83,7 +83,7 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 350px) {
   nav {
     visibility: hidden;
   }
@@ -141,11 +141,10 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 350px) {
   .bgProgramacion {
     display: flex;
     flex-direction: column;
-    min-height: 900px;
   }
   .bgProgramacion .presentacion h1 {
     font-size: 2rem;
@@ -156,9 +155,10 @@ nav ul li a:hover {
   height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  min-height: 900px;
+  min-height: 1100px;
+  gap: 5%;
 }
 
 #sobreMi .curriculum {
@@ -167,12 +167,12 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   width: 30%;
-  height: 100vh;
   gap: 2%;
 }
 
 #sobreMi .curriculum h2 {
   font-size: 1.3rem;
+  text-align: center;
 }
 
 #sobreMi .curriculum span {
@@ -201,7 +201,6 @@ nav ul li a:hover {
 
 #sobreMi .skills {
   width: 30%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,21 +273,6 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
-  #sobreMi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  #sobreMi h2 {
-    font-size: 1.2rem;
-  }
-  #sobreMi .curriculum span {
-    width: 80%;
-  }
-}
-
 #proyectos {
   width: 100%;
   height: 100vh;
@@ -325,7 +309,7 @@ nav ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 2%;
-  min-width: 420px;
+  *min-width: 360px;
 }
 
 #proyectos div .proyects .proyecto {

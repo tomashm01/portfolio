@@ -4,12 +4,12 @@
 $blue: #313cd1;
 $grey: #b4b0b0;
 $grey-black: #4d4d4d;
-$small: 500px;
+$small: 350px;
 $medium: 750px;
 
 body{
     font-family: 'Rowdies', cursive;    
-    min-width: 420px;
+    *min-width: 420px;
 }
 
 html {
@@ -134,7 +134,6 @@ nav{
     @media screen and (max-width: $small) {
         display:flex;
         flex-direction:column;
-        min-height:900px;
         .presentacion{
             h1{
                 font-size: 2rem;
@@ -150,19 +149,20 @@ nav{
     height:100vh;
     display:flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items:center;
-    min-height: 900px;
+    min-height: 1100px;
+    gap:5%;
     .curriculum{
         display: flex;
         flex-direction: column;
         align-items:center;
         justify-content:center;
         width:30%;
-        height:100vh;
         gap:2%;
         h2{
             font-size: 1.3rem;
+            text-align: center;
         }
         span{
             font-size: 1.1rem;
@@ -187,7 +187,6 @@ nav{
     }
     .skills{
         width:30%;
-        height:100vh;
         display: flex;
         flex-direction: column;
         align-items:center;
@@ -253,20 +252,7 @@ nav{
             width:80%;
         }        
     }
-    @media screen and (max-width: $small) {
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        h2{
-            font-size: 1.2rem;
-        }        
-        .curriculum{
-            span{
-                width:80%;
-            }
-        }
-    }
+    
 }
 
 #proyectos{
@@ -299,7 +285,7 @@ nav{
             align-items:center;
             flex-wrap: wrap;
             gap:2%;
-            min-width: 420px;
+            *min-width: 360px;
             .proyecto{
                 position:relative;
                 border-radius: 10px;
