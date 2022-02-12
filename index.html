@@ -17,19 +17,28 @@
     <script src="https://kit.fontawesome.com/70bea623a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-        <picture>
-            <source type="image/png" srcset="img/logoPequeño.png" />
-            <img src="img/logoPequeño.png" alt="picture profile" />
-        </picture>
-        <span class="material-icons-outlined oculto">view_headline</span>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobreMi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="nav">
+          <a href="#" class="logo"><img src="img/logoPequeño.png" alt="Logo pequeño Tomás Hidalgo"></a>
+          <button class="nav-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a href="#inicio" class="nav-menu-link nav-link">Inicio</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#sobreMi" class="nav-menu-link nav-link">Sobre mí</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#proyectos" class="nav-menu-link nav-link">Proyectos</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#contacto" class="nav-menu-link nav-link nav-menu-link_active">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     <main>
         <div class="container">
             <section id="inicio">

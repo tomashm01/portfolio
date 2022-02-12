@@ -9,20 +9,47 @@
     };
     const palabras = ['Fullstack Developer', 'Ingeniero Informático','Desarrollador Web'];
     
-    document.addEventListener('DOMContentLoaded',function(e){
-        
-        const lista=document.querySelectorAll('li');
-        
-
+    document.addEventListener('DOMContentLoaded',function(){        
+        animarMenu();
         animarPalabra();
         animarSkill();
         
-        lista.forEach(function(el){
-            
-        });
-
-        
     });
+
+    const animarMenu=function(){
+      const navToggle = document.querySelector(".nav-toggle");
+      const ul = document.querySelector(".nav-menu");
+      const enlaces=document.querySelectorAll(".nav-link");
+      
+      navToggle.addEventListener("click", () => {
+        ul.classList.toggle("nav-menu_visible");
+        if(ul.classList.contains("nav-menu_visible")){
+          enlaces.forEach(enlace => {
+            enlace.addEventListener("click", () => {
+              ul.classList.remove("nav-menu_visible");
+            });
+          });
+        }
+        if (ul.classList.contains("nav-menu_visible")) {
+          navToggle.setAttribute("aria-label", "Cerrar menú");
+        } else {
+          navToggle.setAttribute("aria-label", "Abrir menú");
+        }
+      });
+
+      enlaces.forEach(enlace => {
+        enlace.addEventListener("click", () => {
+          if(enlace.classList.contains("nav-menu-link_active")){
+            return;
+          }else{
+            enlaces.forEach(enlace => {
+              enlace.classList.remove("nav-menu-link_active");
+            });
+            enlace.classList.add("nav-menu-link_active");
+          }
+        });
+      });
+    }
 
     const animarSkill=function(){
         let otraSkill=document.querySelectorAll('.otraSkill');  
