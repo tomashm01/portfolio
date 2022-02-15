@@ -9,12 +9,41 @@
     };
     const palabras = ['Fullstack Developer', 'Ingeniero Informático','Desarrollador Web'];
     
-    document.addEventListener('DOMContentLoaded',function(){        
+    document.addEventListener('DOMContentLoaded',function(){    
         animarMenu();
         animarPalabra();
         animarSkill();
-        
+        scrollMenu();
     });
+
+    const resetActiveClass=function(){
+      $(".nav-link").each(function(){
+        $(this).removeClass("nav-menu-link_active");
+      });
+    }
+
+    const scrollMenu = function(){
+      
+      $(document).scroll(function(){
+        $("section").each(function(){
+         
+          if($(document).scrollTop()<$("#sobreMi").offset().top && $(document).scrollTop()>0 ){
+            resetActiveClass();
+            $("a[href='#inicio']").addClass("nav-menu-link_active");
+          }else if($(document).scrollTop()<$("#proyectos").offset().top && $(document).scrollTop()>$("#sobreMi").offset().top){
+            resetActiveClass();
+            $("a[href='#sobreMi']").addClass("nav-menu-link_active");
+          }else if($(document).scrollTop()<$("#contacto").offset().top && $(document).scrollTop()>$("#proyectos").offset().top){
+            resetActiveClass();
+            $("a[href='#proyectos']").addClass("nav-menu-link_active");
+          }else if($(document).scrollTop()>$("#contacto").offset().top){
+            resetActiveClass();
+            $("a[href='#contacto']").addClass("nav-menu-link_active");
+          }
+        });
+      });
+
+    }
 
     const animarMenu=function(){
       const navToggle = document.querySelector(".nav-toggle");

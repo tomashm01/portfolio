@@ -59,6 +59,7 @@ header nav .nav-menu {
   margin-right: 5%;
   list-style: none;
   margin: 0px;
+  position: sticky;
 }
 
 header nav .nav-menu .nav-menu-item {
@@ -415,7 +416,7 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
 
 #contacto {
   width: 100%;
-  min-height: 600px;
+  min-height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -516,4 +517,10 @@ footer div div a:hover {
 
 footer div p {
   margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  footer div div {
+    flex-direction: column;
+  }
 }

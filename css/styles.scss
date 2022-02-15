@@ -40,6 +40,7 @@ header {
         width: 100%;
         align-items: center;
         height:80px;
+        
         .nav-toggle {
             color: white;
             background: none;
@@ -61,7 +62,9 @@ header {
             margin-right: 5%;
             list-style: none;
             margin:0px;
+            position:sticky;
             .nav-menu-item {
+                
                 font-size: 18px;
                 margin: 0 10px;
                 line-height: 80px;
@@ -390,7 +393,7 @@ header {
 
 #contacto{
     width:100%;
-    min-height: 600px;
+    min-height: 900px;
     display: flex;
     align-items:center;
     justify-content:center;
@@ -475,6 +478,13 @@ footer{
         }
         p{
             margin-bottom: 0;
+        }
+    }
+    @media (max-width: $small-medium){
+        div{
+            div{
+                flex-direction: column;
+            }
         }
     }
 }
