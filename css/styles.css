@@ -228,6 +228,7 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   flex-direction: row;
   color: white;
   border-radius: 5px;
+  margin-top: 5%;
 }
 
 #sobreMi .curriculum a span {
