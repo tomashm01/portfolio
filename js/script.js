@@ -14,7 +14,16 @@
         animarPalabra();
         animarSkill();
         scrollMenu();
+        scrollViewport();
     });
+
+    const scrollViewport=function(){
+      ScrollReveal().reveal('.presentacion', { delay: 500 });
+      ScrollReveal().reveal('#sobreMi', { delay: 500 });
+      ScrollReveal().reveal('#proyectos', { delay: 500 });
+      ScrollReveal().reveal('#contacto', { delay: 500 });
+      ScrollReveal().reveal('footer div', { delay: 500 });
+    }
 
     const resetActiveClass=function(){
       $(".nav-link").each(function(){
@@ -26,17 +35,16 @@
       
       $(document).scroll(function(){
         $("section").each(function(){
-         
-          if($(document).scrollTop()<$("#sobreMi").offset().top-5 && $(document).scrollTop()>0 ){
+          if($(document).scrollTop()<=$("#sobreMi").offset().top-5 && $(document).scrollTop()>0 ){
             resetActiveClass();
             $("a[href='#inicio']").addClass("nav-menu-link_active");
-          }else if($(document).scrollTop()<$("#proyectos").offset().top-5 && $(document).scrollTop()>$("#sobreMi").offset().top){
+          }else if($(document).scrollTop()<=$("#proyectos").offset().top-5 && $(document).scrollTop()>=$("#sobreMi").offset().top){
             resetActiveClass();
             $("a[href='#sobreMi']").addClass("nav-menu-link_active");
-          }else if($(document).scrollTop()<$("#contacto").offset().top-5 && $(document).scrollTop()>$("#proyectos").offset().top){
+          }else if($(document).scrollTop()<=$("#contacto").offset().top-5 && $(document).scrollTop()>=$("#proyectos").offset().top){
             resetActiveClass();
             $("a[href='#proyectos']").addClass("nav-menu-link_active");
-          }else if($(document).scrollTop()>$("#contacto").offset().top-5){
+          }else if($(document).scrollTop()>=$("#contacto").offset().top-5){
             resetActiveClass();
             $("a[href='#contacto']").addClass("nav-menu-link_active");
           }
