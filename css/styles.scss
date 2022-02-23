@@ -6,7 +6,7 @@ $grey: #b4b0b0;
 $grey-black: #4d4d4d;
 $small: 350px;
 $small-medium: 500px;
-$medium: 750px;
+$medium: 850px;
 
 body{
     font-family: 'Rowdies', cursive;    
@@ -34,22 +34,11 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
-    nav {
-        display: flex;
-        justify-content: space-between;
+    nav{
         width: 100%;
-        align-items: center;
         height:80px;
-        
-        .nav-toggle {
-            color: white;
-            background: none;
-            border: none;
-            font-size: 30px;
-            padding: 0 20px;
-            cursor: pointer;
-            display: none;
-        }
+        display:flex;
+        justify-content:space-between;
         .logo{
             text-decoration: none;
             display:flex;
@@ -57,14 +46,34 @@ header {
             justify-content:center; 
             margin-left: 2%;
         }
+        .nav-toggle:focus:not(:focus-visible) {
+            outline: none;
+        }
+        .nav-toggle{
+            display: block;
+            font-size:30px;
+            border:0;
+            margin-right:20px;
+            padding:0;
+            background-color: transparent;
+            color:white;
+        }
+        
         .nav-menu {
             display: flex;
-            margin-right: 5%;
-            list-style: none;
-            margin:0px;
-            position:sticky;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            padding:0;
+            height: calc(100% - 80px);
+            overflow-y: auto;
+            left: 100%;
+            transition: left 0.3s;
             .nav-menu-item {
-                
                 font-size: 18px;
                 margin: 0 10px;
                 line-height: 80px;
@@ -73,6 +82,7 @@ header {
                 a{
                     color: white;
                     text-decoration: none;
+                    
                 }
                 .nav-menu-link {
                     padding: 8px 12px;
@@ -84,50 +94,50 @@ header {
                   transition: 0.5s;
                 }
             }
-
         }
-    }
-    @media (max-width: $medium) {
-        nav{
+        .nav-menu-link:hover,
+        .nav-menu-link_active {
+          background: none;
+          color: $blue;
+          transition: left 0.3s;
+        }      
+        .nav-menu_visible {
+          left: 0;
+          transition: left 0.3s;
+        }
+    }  
+}
+@media (min-width: $medium) {
+    header{
+        nav {
+            display: flex;
+            justify-content: space-between;
             width: 100%;
+            align-items: center;
             height:80px;
-            .nav-toggle{
-                display: block;
-            }
-            .nav-toggle:focus:not(:focus-visible) {
-                outline: none;
+            .nav-toggle {
+                color: white;
+                background: none;
+                border: none;
+                font-size: 30px;
+                padding: 0 20px;
+                cursor: pointer;
+                display: none;
             }
             .nav-menu {
-                flex-direction: column;
-                align-items: center;
-                margin: 0;
-                background-color: black;
-                position: fixed;
-                top: 80px;
-                width: 100%;
-                padding:0;
-                height: calc(100% - 80px);
-                overflow-y: auto;
-                left: 100%;
-                transition: left 0.3s;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row;
+                margin-right: 5%;
+                list-style: none;
+                margin:0px;
+                position:sticky;
+                height:80px;
             }
-            
-            .nav-menu-link:hover,
-            .nav-menu-link_active {
-              background: none;
-              color: $blue;
-              transition: left 0.3s;
-            }      
-            .nav-menu_visible {
-              left: 0;
-              transition: left 0.3s;
-            }
-        }           
-        
+        }
     }
+    
 }
-
-
 
 .bgProgramacion{
     width:100%;
@@ -136,7 +146,7 @@ header {
     background-size: auto;
     background-attachment: fixed;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     img{
@@ -154,7 +164,7 @@ header {
         animation: opacidad 0.5s;
         h1{
             color: $blue;
-            font-size: 3rem;
+            font-size: 2rem;
             margin:0;
         }
         span{
@@ -162,49 +172,41 @@ header {
             min-height: 30px;
         }
     }
-    @media screen and (max-width: $medium) {
-        display:flex;
-        flex-direction:column;
-        img{
-            margin:0;
-        }
-        .presentacion{
-            margin-top:10%;
-        }
-        h1{
-            font-size: 2.5rem;
-            text-align: center;
-        }
-    }
-    @media screen and (max-width: $small) {
+    @media screen and (min-width: $small) {
         display:flex;
         flex-direction:column;
         .presentacion{
             h1{
-                font-size: 2rem;
+                font-size: 2.5rem;
                 text-align: center;
             }
 
         }
     }
 }
-
+@media screen and (min-width: $medium) {
+    .bgProgramacion{
+        display:flex;
+        flex-direction:row;
+    }
+}
 
 
 #sobreMi{
     height:100vh;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
     min-height: 1100px;
     gap:5%;
+    width:90%;
     .curriculum{
         display: flex;
         flex-direction: column;
         align-items:center;
         justify-content:center;
-        width:30%;
+        width:100%;
         gap:2%;
         h2{
             font-size: 1.3rem;
@@ -233,7 +235,7 @@ header {
         }
     }
     .skills{
-        width:30%;
+        width:100%;
         display: flex;
         flex-direction: column;
         align-items:center;
@@ -287,9 +289,9 @@ header {
             }
         }
     }
-    @media screen and (max-width: $medium) {
+    @media screen and (min-width: $medium) {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content:center;
         align-items:center;
         .curriculum{
@@ -300,6 +302,72 @@ header {
         }        
     }
     
+}
+
+#servicios{
+    width:90%;
+    padding-top:20%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;   
+    h2,h3{
+        text-align:center;
+    }
+    div{
+        margin-top:5%;
+        width:100%;
+        .softskill{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            margin-bottom:10%;
+            width:100%;
+            h4{
+                margin-top:0;
+                &:hover{
+                    color:$blue;
+                }
+            }
+            .icono{
+                font-size:3rem;
+                &:hover{
+                    color:$blue;
+                }
+            }
+            span{
+                text-align:center;
+                font-size:1.1rem;
+            }
+        }
+    }
+    @media screen and (min-width: $small-medium) {
+        padding-top:15%;
+        div {
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content:space-around;
+            .softskill{
+                width:40%;
+            }
+        }
+    }
+    @media screen and (min-width: $medium) {
+        padding-top:10%;
+        div {
+            margin-top:2%;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content:space-around;
+            .softskill{
+                margin-bottom:5%;
+                width:30%;
+            }
+        }
+    }
 }
 
 #proyectos{
@@ -479,13 +547,6 @@ footer{
         }
         p{
             margin-bottom: 0;
-        }
-    }
-    @media (max-width: $small-medium){
-        div{
-            div{
-                flex-direction: column;
-            }
         }
     }
 }

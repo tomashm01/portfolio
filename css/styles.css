@@ -29,21 +29,10 @@ header {
 }
 
 header nav {
+  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  height: 80px;
-}
-
-header nav .nav-toggle {
-  color: white;
-  background: none;
-  border: none;
-  font-size: 30px;
-  padding: 0 20px;
-  cursor: pointer;
-  display: none;
 }
 
 header nav .logo {
@@ -54,12 +43,34 @@ header nav .logo {
   margin-left: 2%;
 }
 
+header nav .nav-toggle:focus:not(:focus-visible) {
+  outline: none;
+}
+
+header nav .nav-toggle {
+  display: block;
+  font-size: 30px;
+  border: 0;
+  margin-right: 20px;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+}
+
 header nav .nav-menu {
   display: flex;
-  margin-right: 5%;
-  list-style: none;
-  margin: 0px;
-  position: sticky;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background-color: black;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  padding: 0;
+  height: calc(100% - 80px);
+  overflow-y: auto;
+  left: 100%;
+  transition: left 0.3s;
 }
 
 header nav .nav-menu .nav-menu-item {
@@ -86,40 +97,44 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   transition: 0.5s;
 }
 
-@media (max-width: 750px) {
+header nav .nav-menu-link:hover,
+header nav .nav-menu-link_active {
+  background: none;
+  color: #313cd1;
+  transition: left 0.3s;
+}
+
+header nav .nav-menu_visible {
+  left: 0;
+  transition: left 0.3s;
+}
+
+@media (min-width: 850px) {
   header nav {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    align-items: center;
     height: 80px;
   }
   header nav .nav-toggle {
-    display: block;
-  }
-  header nav .nav-toggle:focus:not(:focus-visible) {
-    outline: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    cursor: pointer;
+    display: none;
   }
   header nav .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    background-color: black;
-    position: fixed;
-    top: 80px;
-    width: 100%;
-    padding: 0;
-    height: calc(100% - 80px);
-    overflow-y: auto;
-    left: 100%;
-    transition: left 0.3s;
-  }
-  header nav .nav-menu-link:hover,
-  header nav .nav-menu-link_active {
-    background: none;
-    color: #313cd1;
-    transition: left 0.3s;
-  }
-  header nav .nav-menu_visible {
-    left: 0;
-    transition: left 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-right: 5%;
+    list-style: none;
+    margin: 0px;
+    position: sticky;
+    height: 80px;
   }
 }
 
@@ -130,7 +145,7 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   background-size: auto;
   background-attachment: fixed;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -153,7 +168,7 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
 
 .bgProgramacion .presentacion h1 {
   color: #313cd1;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -162,42 +177,33 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   min-height: 30px;
 }
 
-@media screen and (max-width: 750px) {
-  .bgProgramacion {
-    display: flex;
-    flex-direction: column;
-  }
-  .bgProgramacion img {
-    margin: 0;
-  }
-  .bgProgramacion .presentacion {
-    margin-top: 10%;
-  }
-  .bgProgramacion h1 {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 350px) {
+@media screen and (min-width: 350px) {
   .bgProgramacion {
     display: flex;
     flex-direction: column;
   }
   .bgProgramacion .presentacion h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .bgProgramacion {
+    display: flex;
+    flex-direction: row;
   }
 }
 
 #sobreMi {
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 1100px;
   gap: 5%;
+  width: 90%;
 }
 
 #sobreMi .curriculum {
@@ -205,7 +211,7 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 100%;
   gap: 2%;
 }
 
@@ -240,7 +246,7 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
 }
 
 #sobreMi .skills {
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,10 +304,10 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   align-items: center;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 850px) {
   #sobreMi {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -310,6 +316,86 @@ header nav .nav-menu .nav-menu-item .nav-menu-link_active {
   }
   #sobreMi .skills {
     width: 80%;
+  }
+}
+
+#servicios {
+  width: 90%;
+  padding-top: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#servicios h2, #servicios h3 {
+  text-align: center;
+}
+
+#servicios div {
+  margin-top: 5%;
+  width: 100%;
+}
+
+#servicios div .softskill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+  width: 100%;
+}
+
+#servicios div .softskill h4 {
+  margin-top: 0;
+}
+
+#servicios div .softskill h4:hover {
+  color: #313cd1;
+}
+
+#servicios div .softskill .icono {
+  font-size: 3rem;
+}
+
+#servicios div .softskill .icono:hover {
+  color: #313cd1;
+}
+
+#servicios div .softskill span {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 500px) {
+  #servicios {
+    padding-top: 15%;
+  }
+  #servicios div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #servicios div .softskill {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #servicios {
+    padding-top: 10%;
+  }
+  #servicios div {
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #servicios div .softskill {
+    margin-bottom: 5%;
+    width: 30%;
   }
 }
 
@@ -518,10 +604,4 @@ footer div div a:hover {
 
 footer div p {
   margin-bottom: 0;
-}
-
-@media (max-width: 500px) {
-  footer div div {
-    flex-direction: column;
-  }
 }
